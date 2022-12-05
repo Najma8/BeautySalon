@@ -79,7 +79,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-12 my-0 mx-0 d-flex justify-content-between align-items-center">
-								<a href="index.html" class="logo">
+								<a href="index.jsp" class="logo">
 									<img src="images/logo.png" alt="img">
 								</a>
 								<span class="header-phone">
@@ -118,21 +118,21 @@
 														</li>
 														<!-- blog -->
 														<li>
-															<a href="blog.html">BLOG</a>
+															<a href="blog.jsp">BLOG</a>
 														</li>
 														<!-- eof blog -->
 														<li>
-															<a href="about.html">HAKKIMIZDA</a>
+															<a href="about.jsp">HAKKIMIZDA</a>
 														</li>
 														<!-- eof about -->
 														<!-- contacts -->
 														<li>
-															<a href="contact.html">İLETİŞİM</a>
+															<a href="contact.jsp">İLETİŞİM</a>
 														</li>
 														<!-- eof contacts -->
                                                                                                                 <!-- FAQ -->
 														<li>
-															<a href="faq.html">SIKÇA SORULAN SORULAR</a>
+															<a href="faq.jsp">SIKÇA SORULAN SORULAR</a>
 														</li>
 														<!-- eof FAQ -->
 													</ul>
@@ -1063,8 +1063,8 @@
 							<img src="images/signature.png" alt="signature">
 							<div class="fw-divider-space hidden-below-lg mt-65"></div>
 							<div class="fw-divider-space hidden-above-lg mt-30"></div>
-							<a href="contact.html" class="btn btn-outline-maincolor">become a model</a>
-							<a href="casting.html" class="btn btn-maincolor">Schedule Casting</a>
+							<a href="contact.jsp" class="btn btn-outline-maincolor">become a model</a>
+							<a href="casting.jsp" class="btn btn-maincolor">Schedule Casting</a>
 						</div>
 					</div>
 					<div class="fw-divider-space hidden-below-lg mt-30"></div>
@@ -1818,7 +1818,7 @@
 											<span class="author d-flex flex-column align-items-center vcard">
 												<img class="avatar mb-2 rounded-circle" src="images/comment_2.jpg" alt="img">
 												<span class="title">Wayne Fernandez</span>
-												<a class="url fn n" href="blog-full.html">Photographer</a>
+												<a class="url fn n">Photographer</a>
 											</span>
 										</span>
 									</div>
@@ -1834,7 +1834,7 @@
 											<span class="author d-flex flex-column align-items-center vcard">
 												<img class="avatar mb-2 rounded-circle" src="images/comment_1.jpg" alt="img">
 												<span class="title">Pearl Hansen</span>
-												<a class="url fn n" href="blog-full.html">National Model</a>
+												<a class="url fn n">National Model</a>
 											</span>
 										</span>
 									</div>
@@ -1850,7 +1850,7 @@
 											<span class="author d-flex flex-column align-items-center vcard">
 												<img class="avatar mb-2 rounded-circle" src="images/comment_3.jpg" alt="img">
 												<span class="title">Pearl Hansen</span>
-												<a class="url fn n" href="blog-full.html">Manager</a>
+												<a class="url fn n">Manager</a>
 											</span>
 										</span>
 									</div>
