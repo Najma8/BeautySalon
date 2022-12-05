@@ -106,7 +106,7 @@
 										</li>
 										<!-- blog -->
 										<li>
-											<a href="blog.html">Blog</a>
+											<a href="blog.jsp">Blog</a>
 										</li>
 										<!-- eof blog -->
 										<li class="active">
@@ -115,12 +115,12 @@
 										<!-- eof pages -->
 										<!-- contacts -->
 										<li>
-											<a href="contact.html">İLETİŞİM</a>
+											<a href="contact.jsp">İLETİŞİM</a>
 										</li>
 										<!-- eof contacts -->
                                                                                 <!-- FAQ -->
 										<li>
-											<a href="faq.html">Sıkça Sorulan Sorular</a>
+											<a href="faq.jsp">Sıkça Sorulan Sorular</a>
 										</li>
 										<!-- eof FAQ -->
 
@@ -227,8 +227,8 @@
 							<img src="images/signature.png" alt="signature">
 							<div class="fw-divider-space hidden-below-lg mt-75"></div>
 							<div class="fw-divider-space hidden-above-lg mt-30"></div>
-							<a href="contact.html" class="btn btn-outline-maincolor">become a model</a>
-							<a href="casting.html" class="btn btn-maincolor">Schedule Casting</a>
+							<a href="contact.jsp" class="btn btn-outline-maincolor">become a model</a>
+							<a href="casting.jsp" class="btn btn-maincolor">Schedule Casting</a>
 						</div>
 					</div>
 					<div class="fw-divider-space hidden-below-lg mt-30"></div>
@@ -248,7 +248,7 @@
 											<span class="author d-flex flex-column align-items-center vcard">
 												<img class="avatar mb-2 rounded-circle" src="images/comment_2.jpg" alt="img">
 												<span class="title">Wayne Fernandez</span>
-												<a class="url fn n" href="blog-full.html">Photographer</a>
+												<a class="url fn n">Photographer</a>
 											</span>
 										</span>
 									</div>
@@ -264,7 +264,7 @@
 											<span class="author d-flex flex-column align-items-center vcard">
 												<img class="avatar mb-2 rounded-circle" src="images/comment_1.jpg" alt="img">
 												<span class="title">Pearl Hansen</span>
-												<a class="url fn n" href="blog-full.html">National Model</a>
+												<a class="url fn n">National Model</a>
 											</span>
 										</span>
 									</div>
@@ -280,7 +280,7 @@
 											<span class="author d-flex flex-column align-items-center vcard">
 												<img class="avatar mb-2 rounded-circle" src="images/comment_3.jpg" alt="img">
 												<span class="title">Pearl Hansen</span>
-												<a class="url fn n" href="blog-full.html">Manager</a>
+												<a class="url fn n">Manager</a>
 											</span>
 										</span>
 									</div>
