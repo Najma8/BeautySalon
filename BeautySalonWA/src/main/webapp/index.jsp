@@ -30,7 +30,7 @@
 	<![endif]-->
 
 </head>
-
+<form action="index.jsp">
 <body>
 	<!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -88,10 +88,10 @@
 									<span>24/7 aktif</span>
 								</span>
 								<span class="header-soc">
-									<a href="#">
+									<a href="login.jsp">
 										<i class="fa fa-sign-in" aria-hidden="true"></i>
 									</a>
-									<a href="#">
+									<a href="login.jsp">
 										<i class="fa fa-user-o" aria-hidden="true"></i>
 									</a>
 									<a href="#">
@@ -147,10 +147,10 @@
 						<div class="bottom_part">
 							<span class="phone"><span class="color-main pr-1">800</span> 123 4567</span>
 							<span class="header-soc mt-0">
-								<a href="#">
+								<a href="login.jsp">
 									<i class="fa fa-sign-in" aria-hidden="true"></i>
 								</a>
-								<a href="#">
+								<a href="login.jsp">
 									<i class="fa fa-user-o" aria-hidden="true"></i>
 								</a>
 								<a href="#">
@@ -1987,5 +1987,5 @@
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=templateInitGoogleMap&amp;key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4"></script>
 
 </body>
-
+	</form>
 </html>
