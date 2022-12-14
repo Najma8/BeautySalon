@@ -279,24 +279,24 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<input type="text" name="name" class="form-control" placeholder="İSİM SOYİSİM">
+											<input type="text" name="name" class="form-control" placeholder="AD SOYAD">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<input type="email" name="email" class="form-control" placeholder="MAIL ADRESİ">
+											<input type="email" name="email" class="form-control" placeholder="EMAİL">
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<input type="tel" name="phone" class="form-control" placeholder="TELEFON NUMARA">
+											<input type="tel" name="phone" class="form-control" placeholder="TELEFON NO">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<input type="text" name="city" class="form-control" placeholder="ŞEHİRİNİZ">
+											<input type="text" name="city" class="form-control" placeholder="ŞEHİR">
 										</div>
 									</div>
 								</div>
