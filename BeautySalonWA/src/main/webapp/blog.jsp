@@ -250,26 +250,20 @@
 								<div class="col-xl-4 col-md-6">
 									<article class="vertical-item text-center content-padding padding-small bordered post type-post status-publish format-standard has-post-thumbnail">
 										<div class="item-media post-thumbnail">
-											<a href="blog-single-full.html">
 												<img src="images/blog/02.jpg" alt="img">
-											</a>
 										</div><!-- .post-thumbnail -->
 										<div class="item-content">
 											<header class="entry-header">
 												<h4 class="entry-title">
-													<a href="blog-single-full.html" rel="bookmark">
 														Consectetur adipisicing elit
-													</a>
 												</h4>
 												<div class="entry-meta">
 
 
 													<span class="screen-reader-text">Posted on</span>
-													<a href="blog-single-full.html" rel="bookmark">
 														<time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">March 15,
 															2018
 														</time>
-													</a>
 												</div>
 												<!-- .entry-meta -->
 
