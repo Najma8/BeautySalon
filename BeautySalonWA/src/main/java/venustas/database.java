@@ -21,14 +21,11 @@ public class database {
 
     public void insert(String name, String email, String sifre) {
         try {
-            Class.forName("com.jdbc.mysql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("INSERT INTO kullanici(name,email,sifre) Values('" + name + "','" + email + "',sifre='" + sifre + "')");
-            while (rs.next()) {
-                out.println("ekleme yapıldı");
-
-            }
+            Statement stmt = con.createStatement();
+            stmt.execute("INSERT INTO kullanici (name,email,sifre) Values('" + name + "','" + email +"','"+ sifre + "')");
+            System.out.println("oldu");
             con.close();
         } catch (Exception e) {
             out.println(e);
@@ -38,12 +35,11 @@ public class database {
     public boolean giriskontrol(String email, String sifre) {
         boolean girisyapilsinmi=false;
         try {
-            Class.forName("com.jdbc.mysql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("Select * from kullanici where email='" + email + "' and sifre='" + sifre + "'");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * from kullanici where email='" + email + "' and sifre='" + sifre + "'");
             while (rs.next()) {
-                
                girisyapilsinmi=true;
             }
             con.close();
@@ -54,13 +50,13 @@ public class database {
         return girisyapilsinmi;
         
     }
-        public boolean kayitlimikontrol(String email, String sifre) {
+        public boolean kayitlimikontrol(String email) {
             boolean kayitlimi=false;
         try {
-            Class.forName("com.jdbc.mysql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("Select * from kullanici where email='" + email + "' and sifre='" + sifre + "'");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * from kullanici where email='" + email + "'");
             while (rs.next()) {
                 
               kayitlimi=true;
