@@ -94,7 +94,7 @@
 									<a href="login.jsp">
 										<i class="fa fa-user-o" aria-hidden="true"></i>
 									</a>
-									<a href="#">
+									<a href="calender.html">
 										<i class="fa fa-calendar" aria-hidden="true"></i>
 									</a>
 									<span class="toggle_menu toggle_menu_side header-slide toggle_menu_special"><span></span></span>
