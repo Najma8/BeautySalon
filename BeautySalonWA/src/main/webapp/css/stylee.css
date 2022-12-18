@@ -8,6 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 */
 
 body {
+    background-image:url("../images/bg-menu.jpg");
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #333;
     font-size: 16px;
@@ -34,7 +35,7 @@ h1 {
 }
 .calendar-day {
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #e41779;
     padding: 2px 8px;
     width: 8.6599%;
     line-height: 2px;
