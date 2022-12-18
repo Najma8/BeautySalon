@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page  import="venustas.database"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,6 +15,19 @@
         <title>Yeni Hesap Oluştur</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/my-login.css">
+        <script type="text/javascript">
+            function KosulKontrolu() {
+                if (document.getElementById('agree').checked) {
+                    return true;
+                } else {
+                    alert("Şartlar ve Koşullarımızı kabul etmelisiniz!");
+                    return false;
+                }
+            }
+            function KullaniciVar() {
+                alert("Bu email ile zaten bir hesap mevcuttur!");
+            }
+        </script>
     </head>
     <body class="my-login-page">
         <section class="h-100">
@@ -26,7 +40,7 @@
                         <div class="card fat">
                             <div class="card-body">
                                 <h4 class="card-title">Yeni Hesap Oluştur</h4>
-                                <form method="POST" class="my-login-validation" novalidate="">
+                                <form method="POST" class="my-login-validation" novalidate="" onsubmit="return KosulKontrolu()" action="#">
                                     <div class="form-group">
                                         <label for="name">Ad Soyad</label>
                                         <input id="name" type="text" class="form-control" name="name" required autofocus>
@@ -53,7 +67,7 @@
 
                                     <div class="form-group">
                                         <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
+                                            <input type="checkbox" name="agree" id="agree" class="custom-control-input" value="true" required="">
                                             <label for="agree" class="custom-control-label"><a href="#">Hüküm ve Koşulları </a>kabul ediyorum</label>
                                             <div class="invalid-feedback">
                                                 Şartlar ve Koşullarımızı kabul etmelisiniz
@@ -62,7 +76,7 @@
                                     </div>
 
                                     <div class="form-group m-0">
-                                        <button type="submit" class="btn btn-primary btn-block">
+                                        <button type="submit" class="btn btn-primary btn-block" >
                                             Kayıt Ol
                                         </button>
                                     </div>
@@ -79,5 +93,29 @@
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="js/my-login.js"></script>
+
+        <%
+            String name = request.getParameter("name");
+            String email = request.getParameter("email");
+            String sifre = request.getParameter("password");
+            if (email != null && sifre != null && name != null) {
+                database kayit = new database();
+                Boolean kayitlimi = kayit.kayitlimikontrol(email);
+                if (kayitlimi) {
+        %>
+        <script>
+            KullaniciVar();
+        </script>
+        <%
+                } else {
+                    if (email != "" && sifre != "" && name != "") {
+                        kayit.insert(name, email, sifre);
+                        session.setAttribute("email", email);
+                        session.setMaxInactiveInterval(86400);
+                        response.sendRedirect("index.jsp");
+                    }
+                }
+            }
+        %>
     </body>
 </html>
