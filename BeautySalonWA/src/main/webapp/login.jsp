@@ -24,8 +24,8 @@
             text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
             border-color: #e41779;
         }
-        .swal-button:hover{
-            background-color: #e41779;
+         .swal-button:hover:focus{
+            background-color: #8c0f4b;
             font-size: 14px;
 
         }
