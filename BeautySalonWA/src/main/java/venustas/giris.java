@@ -9,18 +9,9 @@ package venustas;
  * @author ESMA
  */
 public class giris {
-    int id;
-    String giristipi;
-    int kullaniciid;
-    int calisanid;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    String giristipi = null;
+    Boolean girisdurumu;
 
     public String getGiristipi() {
         return giristipi;
@@ -30,20 +21,11 @@ public class giris {
         this.giristipi = giristipi;
     }
 
-    public int getKullaniciid() {
-        return kullaniciid;
+    public Boolean getGirisdurumu() {
+        return girisdurumu;
     }
 
-    public void setKullaniciid(int kullaniciid) {
-        this.kullaniciid = kullaniciid;
+    public void setGirisdurumu(Boolean girisdurumu) {
+        this.girisdurumu = girisdurumu;
     }
-
-    public int getCalisanid() {
-        return calisanid;
-    }
-
-    public void setCalisanid(int calisanid) {
-        this.calisanid = calisanid;
-    }
-    
 }
