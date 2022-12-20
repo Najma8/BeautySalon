@@ -36,7 +36,6 @@ public class database {
     public giris giriskontrol(String email, String sifre) {
         giris g = new giris();
         g.setGirisdurumu(false);
-        boolean girisyapilsinmi = false;
         try {
             int id = 0;
             Class.forName("com.mysql.jdbc.Driver");
@@ -46,14 +45,12 @@ public class database {
             while (rs.next()) {
                 g.setGiristipi("kullanici");
                 g.setGirisdurumu(true);
-                girisyapilsinmi = true;
                 id = rs.getInt("id");
             }
             rs = stmt.executeQuery("Select * from calisan where email='" + email + "' and sifre='" + sifre + "'");
             while (rs.next()) {
                 g.setGiristipi("calisan");
                 g.setGirisdurumu(true);
-                girisyapilsinmi = true;
                 id = rs.getInt("id");
             }
             if (g.getGiristipi() != null) {
