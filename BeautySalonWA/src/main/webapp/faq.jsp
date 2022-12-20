@@ -131,7 +131,7 @@
 												<a href="login.jsp">
 													<i class="fa fa-user-o" aria-hidden="true"></i>
 												</a>
-												<a href="calender.html">
+												<a href="calendar.html">
 													<i class="fa fa-calendar" aria-hidden="true"></i>
 												</a>
 											</span>
@@ -155,17 +155,17 @@
 							<div class="top-includes">
 								<ul class="top-includes d-none d-xl-flex">
 									<li>
-										<a href="#">
+										<a href="login.jsp">
 											<i class="fa fa-sign-in" aria-hidden="true"></i>
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="login.jsp">
 											<i class="fa fa-user-o" aria-hidden="true"></i>
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="calendar.html">
 											<i class="fa fa-calendar" aria-hidden="true"></i>
 										</a>
 									</li>
