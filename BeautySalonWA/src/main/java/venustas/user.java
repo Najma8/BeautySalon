@@ -20,9 +20,18 @@ public class user {
     int id;
     String name;
     String email;
-    String sifre;
     String telno;
     int yas;
+
+    public user(int id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.telno = "";
+        this.yas= 0;
+    }
+    
+    
 
     public int getId() {
         return id;
@@ -48,13 +57,6 @@ public class user {
         this.email = email;
     }
 
-    public String getSifre() {
-        return sifre;
-    }
-
-    public void setSifre(String sifre) {
-        this.sifre = sifre;
-    }
 
     public String getTelno() {
         return telno;
