@@ -161,15 +161,20 @@
 
                                             <li class="top-includes">
                                                 <span class="top-includes d-xl-flex">
+                                                    <%
+                                                        if (session.getAttribute("email") != null) {
+                                                    %>
                                                     <a href="login.jsp">
                                                         <i class="fa fa-sign-in" aria-hidden="true"></i>
                                                     </a>
+                                                    <a href="calendar.jsp">
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                    </a>
+                                                    <%} else {%>
                                                     <a href="login.jsp">
                                                         <i class="fa fa-user-o" aria-hidden="true"></i>
                                                     </a>
-                                                    <a href="calendar.html">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    </a>
+                                                    <%}%>
                                                 </span>
                                                 <span class="header-phone">
                                                     <span>BİZİ ARAYIN</span>
@@ -190,21 +195,20 @@
                             <div class="col-xl-3 col-lg-4 col-md-5 col-11">
                                 <div class="top-includes">
                                     <ul class="top-includes d-none d-xl-flex">
-                                        <li>
-                                            <a href="login.jsp">
-                                                <i class="fa fa-sign-in" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="login.jsp">
-                                                <i class="fa fa-user-o" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="calendar.html">
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
+                                        <%
+                                            if (session.getAttribute("email") != null) {
+                                        %>
+                                        <a href="login.jsp">
+                                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="calendar.jsp">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </a>
+                                        <%} else {%>
+                                        <a href="login.jsp">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </a>
+                                        <%}%>
                                     </ul>
                                     <span class="header-phone">
                                         <span>Bizi arayın</span>
@@ -337,7 +341,7 @@
                                     <a href="https://www.google.com/" class="fa fa-google color-bg-icon rounded" title="google"></a>
                                 </div>
                                 <div class="widget logo">
-                                    <img src="images/logo.png" alt="img">
+                                    <img src="images/logo.png" alt="img" width="468" height="214.6">
                                 </div>
                             </div>
                         </div>
@@ -349,27 +353,27 @@
         <script src="js/main.js"></script>
 
         <script>
-        
+
         function getAlert() {
-            
+
             swal
                     ({
                         //  title: "Uyarı!",
                         text: "Seçmiş olduğunuz zamanda başka bir randevu bulunmaktadır!",
                         //icon: "error",
                         button: "Tamam",
-                        
+
                     });
         }
         function getAlert2() {
-            
+
             swal
                     ({
                         //  title: "Uyarı!",
                         text: "Herhangi bir kategori seçmediniz!",
                         //icon: "error",
                         button: "Tamam",
-                        
+
                     });
         }
         </script>
@@ -381,13 +385,13 @@
             String kategori = request.getParameter("kategori");
             String not = request.getParameter("about_user");
             if (phone != null && email != null && age != null && tarih != null && kategori != null) {
-                
+
                 if (kategori == "kategori") {
         %>
         <script>
             getAlert2();
         </script>
-        <%    
+        <%
         } else {
             database randevu = new database();
             Boolean rolustumu = randevu.RandevuKontrolu(phone, age, tarih, kategori, email, not);
@@ -398,7 +402,7 @@
         <script>
             getAlert();
         </script>
-        <%                
+        <%
                     }
                 }
             }
