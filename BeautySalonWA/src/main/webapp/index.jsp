@@ -130,7 +130,7 @@
                                             <a href="login.jsp">
                                                 <i class="fa fa-sign-in" aria-hidden="true"></i>
                                             </a>
-                                            <a href="calendar.html">
+                                            <a href="calendar.jsp">
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                             </a>
                                             <%} else {%>
@@ -194,7 +194,7 @@
                                         <a href="login.jsp">
                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                                         </a>
-                                        <a href="calendar.html">
+                                        <a href="calendar.jsp">
                                             <i class="fa fa-calendar" aria-hidden="true"></i>
                                         </a>
                                         <%} else {%>
