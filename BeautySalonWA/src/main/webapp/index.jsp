@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html class="no-js">
     <head>
+          <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
         <title>Venustas</title>
