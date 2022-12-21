@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+          <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <meta charset="utf-8">
         <meta name="author" content="Kodinger">
         <meta name="viewport" content="width=device-width,initial-scale=1">
