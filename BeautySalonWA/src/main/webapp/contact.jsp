@@ -16,6 +16,7 @@
 
     <!-- contact212:57:30  -->
     <head>
+          <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <title>İletişim</title>
         <meta charset="utf-8">
         <!--[if IE]>
