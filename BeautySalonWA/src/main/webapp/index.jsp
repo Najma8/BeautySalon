@@ -234,7 +234,7 @@
 			</section>
 
 			
-			<section id="gallery" class="gallery-section gallery-6 bottom_mask_add overflow-visible ds s-pt-115 s-pb-70 s-pb-md-80 s-pt-md-135 s-pb-xl-155 s-pt-xl-205">
+			<section id="gallery" class="gallery-section gallery-6 top_mask_add overflow-visible ds s-pt-115 s-pb-70 s-pb-md-80 s-pt-md-135 s-pb-xl-155 s-pt-xl-205">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="fw-divider-space hidden-below-xl pt-70"></div>
