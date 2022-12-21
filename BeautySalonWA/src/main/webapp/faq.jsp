@@ -403,7 +403,7 @@
                                     <a href="https://www.google.com/" class="fa fa-google color-bg-icon rounded" title="google"></a>
                                 </div>
                                 <div class="widget logo">
-                                    <img src="images/logo.png" alt="img">
+                                    <img src="images/logo.png" alt="img" width="468" height="214.6">
                                 </div>
                             </div>
                         </div>
