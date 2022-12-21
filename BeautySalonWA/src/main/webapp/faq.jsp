@@ -17,6 +17,7 @@
     <!-- faq12:57:26  -->
     <head>
         <title>Sıkça Sorulan Sorular</title>
+          <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <meta charset="utf-8">
         <!--[if IE]>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
