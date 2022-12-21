@@ -90,7 +90,7 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-4 col-md-5 col-11">
-                                <a href="index.html" class="logo">
+                                <a href="index.jsp" class="logo">
                                     <img src="images/logo.png" alt="img">
                                 </a>
                             </div>
