@@ -9,9 +9,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
         <meta charset="utf-8">
         <meta name="author" content="Kodinger">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            .swal-button {
+                padding: 10px 22px;
+                border-radius: 2px;
+                background-color: #e41779;
+                font-size: 14px;
+                border: 1px solid #3e549a;
+                text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+                border-color: #e41779;
+            }
+            .swal-button::hover {
+                background-color: #8c0f4b;
+                font-size: 14px;
+
+            }
+            .swal-button:not([disabled]):hover {
+                background-color: #8c0f4b;
+            }
+            .swal-text {
+
+                padding: 17px;
+                display: block;
+                margin: 22px;
+                text-align: center;
+                color: #61534e;
+                font-size: 18px;
+
+            }
+            .swal-button:focus {
+                background-color: #e41779;
+            }
+
+
+        </style>
         <title>Yeni Hesap Oluştur</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/my-login.css">
@@ -23,9 +59,16 @@
                     alert("Şartlar ve Koşullarımızı kabul etmelisiniz!");
                     return false;
                 }
+                
             }
             function KullaniciVar() {
-                alert("Bu email ile zaten bir hesap mevcuttur!");
+                swal
+                        ({
+                            //  title: "Uyarı!",
+                            text: "Bu email ile zaten bir hesap mevcuttur!",
+                            //icon: "error",
+                            button: "Tamam"
+                        });
             }
         </script>
     </head>
