@@ -16,8 +16,10 @@
 
     <!-- about12:56:57  -->
     <head>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
         <title>Hakkımızda</title>
-         <link rel="icon" href="images/home_icon.png" type="image/x-icon">
+        <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <meta charset="utf-8">
         <!--[if IE]>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,6 +42,40 @@
                 <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <![endif]-->
 
+        <style>
+            .swal-button {
+                padding: 10px 22px;
+                border-radius: 2px;
+                background-color: #e41779;
+                font-size: 14px;
+                border: 1px solid #3e549a;
+                text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+                border-color: #e41779;
+            }
+            .swal-button::hover {
+                background-color: #8c0f4b;
+                font-size: 14px;
+
+            }
+            .swal-button:not([disabled]):hover {
+                background-color: #8c0f4b;
+            }
+            .swal-text {
+
+                padding: 17px;
+                display: block;
+                margin: 22px;
+                text-align: center;
+                color: #61534e;
+                font-size: 18px;
+
+            }
+            .swal-button:focus {
+                background-color: #e41779;
+            }
+
+
+        </style>
     </head>
 
     <body>
@@ -233,7 +269,18 @@
                                 <div class="fw-divider-space hidden-below-lg mt-75"></div>
                                 <div class="fw-divider-space hidden-above-lg mt-30"></div>
 
+                                <%
+                                    if (session.getAttribute("email") != null) {
+                                        if (session.getAttribute("giristipi").equals("kullanici")) {
+                                %>
                                 <a href="casting.jsp" class="btn btn-maincolor">Randevu Al</a>
+                                <%} else {
+                                %>
+                                <a onclick="getAlert()" class="btn btn-maincolor">Randevu Al</a>
+                                <%}
+                                } else {%>
+                                <a onclick="getAlert2()" class="btn btn-maincolor">Randevu Al</a>
+                                <%}%>
                             </div>
                         </div>
                         <div class="fw-divider-space hidden-below-lg mt-30"></div>
@@ -324,6 +371,30 @@
                 </footer>
             </div><!-- eof #box_wrapper -->
         </div><!-- eof #canvas -->
+        <script>
+            function getAlert() {
+
+                swal
+                        ({
+                            //  title: "Uyarı!",
+                            text: "Çalışan olduğunuz için randevu alamazsınız!",
+                            //icon: "error",
+                            button: "Tamam",
+                        });
+            }
+            function getAlert2() {
+
+                swal
+                        ({
+                            //  title: "Uyarı!",
+                            text: "Randevu alabilmek için giriş yapmanız gerekir!",
+                            //icon: "error",
+                            button: "Tamam",
+                        }).then(function () {
+                    window.location = "login.jsp";
+                });
+            }
+        </script>
         <script src="js/compressed.js"></script>
         <script src="js/main.js"></script>
     </body>
