@@ -53,15 +53,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/my-login.css">
         <script type="text/javascript">
-            function KosulKontrolu() {
-                if (document.getElementById('agree').checked) {
-                    return true;
-                } else {
-                    alert("Şartlar ve Koşullarımızı kabul etmelisiniz!");
-                    return false;
-                }
-                
-            }
+          
+            
             function KullaniciVar() {
                 swal
                         ({
@@ -84,7 +77,7 @@
                         <div class="card fat">
                             <div class="card-body">
                                 <h4 class="card-title">Yeni Hesap Oluştur</h4>
-                                <form method="POST" class="my-login-validation" novalidate="" onsubmit="return KosulKontrolu()" action="#">
+                                <form method="POST" class="my-login-validation" novalidate="" action="#">
                                     <div class="form-group">
                                         <label for="name">Ad Soyad</label>
                                         <input id="name" type="text" class="form-control" name="name" required autofocus>
@@ -114,7 +107,7 @@
                                             <input type="checkbox" name="agree" id="agree" class="custom-control-input" value="true" required="">
                                             <label for="agree" class="custom-control-label"><a href="#">Hüküm ve Koşulları </a>kabul ediyorum</label>
                                             <div class="invalid-feedback">
-                                                Şartlar ve Koşullarımızı kabul etmelisiniz
+                                              Hüküm ve Şartlarımızı kabul etmelisiniz!
                                             </div>
                                         </div>
                                     </div>
