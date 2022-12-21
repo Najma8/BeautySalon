@@ -559,4 +559,5 @@
             <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=templateInitGoogleMap&amp;key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4"></script>
 
         </body>
+    </form>
 </html>
