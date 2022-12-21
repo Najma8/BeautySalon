@@ -136,7 +136,7 @@
                     session.setAttribute("giristipi", g.getGiristipi());
                     session.setAttribute("email", email);
                     session.setMaxInactiveInterval(86400);
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("calendar.html");
                 } else {
         %>
         <script>
