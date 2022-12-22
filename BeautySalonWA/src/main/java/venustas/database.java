@@ -4,6 +4,8 @@
  */
 package venustas;
 
+import org.json.simple.*;
+import org.json.simple.parser.JSONParser;
 import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import javax.json.JsonObject;
 
 /**
  *
@@ -123,5 +126,72 @@ public class database {
             out.println(e);
         }
         return olusturdumu;
+    }
+
+    public JSONArray Randevu(String email) {
+        JSONObject j1 = new JSONObject();
+        ArrayList<String> datetime = new ArrayList<>();
+        ArrayList<String> kategoriadi = new ArrayList<>();
+        ArrayList<String> date = new ArrayList<>();
+        ArrayList<String> time = new ArrayList<>();
+
+        JSONArray array;
+        array = new JSONArray();
+        int[] dateint = {};
+        int[] starttime = {};
+        int kullaniciid = 0;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * from kullanici where email='" + email + "'");
+            while (rs.next()) {
+                kullaniciid = rs.getInt("id");
+            }
+            rs = stmt.executeQuery("SELECT * FROM randevu INNER JOIN kategori ON randevu.kategoriid = kategori.id WHERE randevu.kullaniciid =" + kullaniciid);
+            while (rs.next()) {
+                String sqldatetime = rs.getTimestamp("tarih").toString();
+                String kategori = rs.getString("name");
+                date.add(sqldatetime);
+                kategoriadi.add(kategori);
+            }
+            con.close();
+            for (int i = 0; i < datetime.size(); i++) {
+                String[] testdizi = datetime.get(i).split(" ");
+                String teststring = testdizi[0];
+                date.add(teststring);
+                teststring = testdizi[1];
+                time.add(teststring);
+            }
+            for (int i = 0; i < date.size(); i += 3) {
+                String[] testdizi = date.get(i).split("-");
+                String teststring = testdizi[0];
+                dateint[i] = Integer.parseInt(teststring);
+                teststring = testdizi[1];
+                dateint[i + 1] = Integer.parseInt(teststring);
+                teststring = testdizi[2];
+                dateint[i + 2] = Integer.parseInt(teststring);
+            }
+            for (int i = 0; i < time.size(); i += 3) {
+                String[] testdizi = time.get(i).split(":");
+                String teststring = testdizi[0];
+                starttime[i] = Integer.parseInt(teststring);
+                teststring = testdizi[1];
+                starttime[i + 1] = Integer.parseInt(teststring);
+            }
+            JSONParser parser = new JSONParser();
+            int j = 0;
+            int k = 0;
+            for (int i = 0; i < kategoriadi.size(); i++) {
+                String stringToParse = "{\\\"day\\\":" + dateint[j + 2] + ",\\\"month\\\":" + dateint[j + 1] + ",\\\"year\\\":" + dateint[j] + ",\\\"events\\\":[{\\\"title\\\":\\\"" + kategoriadi.get(i) + "\\\",\\\"time\\\":\\\"" + starttime[k] + starttime[k + 1] + "\\\"}]}";
+                j = j + 3;
+                k = k + 2;
+                JSONObject json = (JSONObject) parser.parse(stringToParse);
+                array.add(json);
+            }
+        } catch (Exception e) {
+            out.println(e);
+        }
+        return array;
     }
 }
