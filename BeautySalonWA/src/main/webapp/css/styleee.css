@@ -316,7 +316,7 @@ body {
   gap: 5px;
   padding: 0 20px;
   padding-left: 50px;
-  color: #fff;
+  color: black;
   background: linear-gradient(90deg, #a32c65, transparent);
   cursor: pointer;
 }
