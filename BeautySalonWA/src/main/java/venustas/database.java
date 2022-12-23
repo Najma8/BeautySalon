@@ -7,6 +7,7 @@ package venustas;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import static java.lang.System.out;
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,6 +17,9 @@ import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import javax.json.JsonObject;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  *
@@ -29,7 +33,6 @@ public class database {
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
             Statement stmt = con.createStatement();
             stmt.execute("INSERT INTO kullanici (name,email,sifre) Values('" + name + "','" + email + "','" + sifre + "')");
-            System.out.println("oldu");
             con.close();
         } catch (Exception e) {
             out.println(e);
@@ -134,11 +137,12 @@ public class database {
         ArrayList<String> kategoriadi = new ArrayList<>();
         ArrayList<String> date = new ArrayList<>();
         ArrayList<String> time = new ArrayList<>();
+        ArrayList<Integer> dateint = new ArrayList<>();
+        ArrayList<String> starttime = new ArrayList<>();
 
+        JSONParser parser = new JSONParser();
         JSONArray array;
         array = new JSONArray();
-        int[] dateint = {};
-        int[] starttime = {};
         int kullaniciid = 0;
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -152,7 +156,7 @@ public class database {
             while (rs.next()) {
                 String sqldatetime = rs.getTimestamp("tarih").toString();
                 String kategori = rs.getString("name");
-                date.add(sqldatetime);
+                datetime.add(sqldatetime);
                 kategoriadi.add(kategori);
             }
             con.close();
@@ -163,32 +167,56 @@ public class database {
                 teststring = testdizi[1];
                 time.add(teststring);
             }
-            for (int i = 0; i < date.size(); i += 3) {
+            int x = 0;
+            int y = 0;
+            for (int i = 0; i < date.size(); i++) {
                 String[] testdizi = date.get(i).split("-");
-                String teststring = testdizi[0];
-                dateint[i] = Integer.parseInt(teststring);
-                teststring = testdizi[1];
-                dateint[i + 1] = Integer.parseInt(teststring);
-                teststring = testdizi[2];
-                dateint[i + 2] = Integer.parseInt(teststring);
+
+                try {
+                    String teststring = testdizi[0];
+                    dateint.add(Integer.parseInt(teststring));
+                    teststring = testdizi[1];
+                    dateint.add(Integer.parseInt(teststring));
+                    teststring = testdizi[2];
+                    dateint.add(Integer.parseInt(teststring));
+                    x = x + 3;
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
             }
-            for (int i = 0; i < time.size(); i += 3) {
+            for (int i = 0; i < time.size(); i++) {
                 String[] testdizi = time.get(i).split(":");
-                String teststring = testdizi[0];
-                starttime[i] = Integer.parseInt(teststring);
-                teststring = testdizi[1];
-                starttime[i + 1] = Integer.parseInt(teststring);
+                try {
+                    String teststring = testdizi[0];
+                    String teststring2 = testdizi[1];
+                    starttime.add(teststring+":"+teststring2);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
             }
-            JSONParser parser = new JSONParser();
             int j = 0;
             int k = 0;
             for (int i = 0; i < kategoriadi.size(); i++) {
-                String stringToParse = "{\\\"day\\\":" + dateint[j + 2] + ",\\\"month\\\":" + dateint[j + 1] + ",\\\"year\\\":" + dateint[j] + ",\\\"events\\\":[{\\\"title\\\":\\\"" + kategoriadi.get(i) + "\\\",\\\"time\\\":\\\"" + starttime[k] + starttime[k + 1] + "\\\"}]}";
+                
+                Map events = new LinkedHashMap();
+                events.put("title", kategoriadi.get(i));
+                events.put("time", starttime.get(i));
+
+                JSONArray eventsarray = new JSONArray();
+                eventsarray.add(events);
+
+                Map randevubilgisi = new LinkedHashMap();
+                randevubilgisi.put("day", dateint.get(j + 2));
+                randevubilgisi.put("month", dateint.get(j + 1));
+                randevubilgisi.put("year", dateint.get(j));
+                randevubilgisi.put("events", eventsarray);
+
+                array.add(randevubilgisi);
+
                 j = j + 3;
                 k = k + 2;
-                JSONObject json = (JSONObject) parser.parse(stringToParse);
-                array.add(json);
             }
+            System.out.println(array.toString());
         } catch (Exception e) {
             out.println(e);
         }
