@@ -144,7 +144,7 @@
                                                                 <span class="header-phone">
                                                                     <span>BİZİ ARAYIN</span>
                                                                     <span class="phone"><span class="color-main">800</span> 123 4567</span>
-                                                                    <span>24/7 AKTİF</span>
+                                                                    <span>7/24 AKTİF</span>
                                                                 </span>
                                                             </li>
                                                         </ul>
