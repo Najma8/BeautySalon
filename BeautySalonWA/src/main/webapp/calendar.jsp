@@ -27,35 +27,11 @@
         <link rel="stylesheet" href="plugins/dropzone/dropzone.min.css" type="text/css"/>
         <%
             database d1 = new database();
-            JSONArray j1 = d1.Randevu("mino@gmail.com");
+            JSONArray j1 = d1.Randevu(session.getAttribute("email").toString());
         %>
         <script>
-            var test = '<%=j1%>';
-            var testObject = [
-                {
-                    "day": 23,
-                    "month": 12,
-                    "year": 2022,
-                    "events": [
-                        {
-                            "title": "hiiii",
-                            "time": "11:23"
-                        }
-                    ]
-                },
-                {
-                    "day": 24,
-                    "month": 12,
-                    "year": 2022,
-                    "events": [
-                        {
-                            "title": "hello!",
-                            "time": "8:20 PM - 10:22 PM"
-                        }
-                    ]
-                }
-            ];
-            localStorage.setItem('events', JSON.stringify('<%=j1%>'));
+            var test = <%=j1%>;
+            localStorage.setItem('events', JSON.stringify(test));
         </script>
 
         <title>Randevu Takvimi</title>
@@ -94,7 +70,7 @@
                     <div class="event-date">12 Aralık 2022</div>
                 </div>
                 <div class="events"></div>
-                <div class="add-event-wrapper">
+                <div class="add-event-wrapper" hidden>
                     <div class="add-event-header">
                         <div class="title">Randevu Ekle</div>
                         <i class="fas fa-times close"></i>
@@ -123,9 +99,6 @@
                     </div>
                 </div>
             </div>
-            <button class="add-event">
-                <i class="fas fa-plus"></i>
-            </button>
         </div>
 
         <script src="js/scripttt.js"></script>
