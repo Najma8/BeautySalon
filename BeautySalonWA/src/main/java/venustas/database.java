@@ -98,6 +98,7 @@ public class database {
     public boolean RandevuKontrolu(String telno, String yas, String time, String kategori, String email, String not) {
         boolean olusturdumu = false;
         try {
+            int tekrarlamasuresi = 0, seanssayisi = 1;
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
             Statement stmt = con.createStatement();
@@ -109,16 +110,31 @@ public class database {
                 int kullaniciid = 0;
                 ResultSet rs2 = stmt.executeQuery("Select * from kategori where name='" + kategori + "'");
                 while (rs2.next()) {
+                    tekrarlamasuresi = rs2.getInt("tekrarlamasuresi");
+                    seanssayisi = rs2.getInt("seanssayisi");
                     kategoriid = rs2.getInt("id");
                 }
                 ResultSet rs3 = stmt.executeQuery("Select * from kullanici where email='" + email + "'");
                 while (rs3.next()) {
                     kullaniciid = rs3.getInt("id");
                 }
-                if (!not.equals("")) {
-                    stmt.execute("INSERT INTO `randevu` (`tarih`, `kategoriid`, `kullaniciid`, `not`) VALUES ('" + dateTime + "'," + kategoriid + "," + kullaniciid + ",'" + not + "')");
-                } else {
-                    stmt.execute("INSERT INTO randevu (tarih,kategoriid,kullaniciid) Values('" + dateTime + "'," + kategoriid + "," + kullaniciid + ")");
+                int degisimsayisi;
+                for (int i = 1; i <= seanssayisi; i++) {
+                    if (!not.equals("")) {
+                        stmt.execute("INSERT INTO `randevu` (`tarih`, `kategoriid`, `kullaniciid`, `not`) VALUES ('" + dateTime + "'," + kategoriid + "," + kullaniciid + ",'" + not + "')");
+                    } else {
+                        stmt.execute("INSERT INTO randevu (tarih,kategoriid,kullaniciid) Values('" + dateTime + "'," + kategoriid + "," + kullaniciid + ")");
+                    }
+                    dateTime = dateTime.plusDays(tekrarlamasuresi);
+                    do {
+                        degisimsayisi = 0;
+                        ResultSet rset = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
+                        while (rset.next()) {
+                            dateTime = dateTime.plusHours(1);
+                            degisimsayisi = 1;
+                        }
+                    } while (degisimsayisi == 1);
+
                 }
 
                 olusturdumu = true;
@@ -189,7 +205,7 @@ public class database {
                 try {
                     String teststring = testdizi[0];
                     String teststring2 = testdizi[1];
-                    starttime.add(teststring+":"+teststring2);
+                    starttime.add(teststring + ":" + teststring2);
                 } catch (Exception e) {
                     System.out.println(e);
                 }
@@ -197,7 +213,7 @@ public class database {
             int j = 0;
             int k = 0;
             for (int i = 0; i < kategoriadi.size(); i++) {
-                
+
                 Map events = new LinkedHashMap();
                 events.put("title", kategoriadi.get(i));
                 events.put("time", starttime.get(i));
