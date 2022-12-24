@@ -34,7 +34,7 @@ const calendar = document[_0x42bd25(0xbf)]('.calendar'), date = document[_0x42bd
         document[_0x42bd25(0xbf)]('.add-event-btn\x20');
 let today = new Date(), activeDay, month =
         today[_0x42bd25(0xd5)](), year = today['getFullYear']();
-const months = ['Ocak','Şubat',
+const months = ['Ocak', 'Şubat',
     'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım',
     'Aralık'], eventsArr = [];
 getEvents(), console[_0x42bd25(0xfc)](eventsArr);
