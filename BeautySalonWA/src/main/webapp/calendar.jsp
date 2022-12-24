@@ -27,7 +27,12 @@
         <link rel="stylesheet" href="plugins/dropzone/dropzone.min.css" type="text/css"/>
         <%
             database d1 = new database();
-            JSONArray j1 = d1.Randevu(session.getAttribute("email").toString());
+            JSONArray j1;
+            if (session.getAttribute("email") != null) {
+                j1 = d1.Randevu(session.getAttribute("email").toString());
+            } else {
+                j1 = new JSONArray();
+            }
         %>
         <script>
             var test = <%=j1%>;
