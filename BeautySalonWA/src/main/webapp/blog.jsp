@@ -401,7 +401,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Repudiandae sint velit vero voluptas
+                                                        Kalıcı Makyaj Nedir?
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -417,7 +417,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Aperiam consequuntur culpa dolorem fugit, nisi quos? Accusamus, aliquam!</p>
+                                                    <p>Kalıcı Makyaj Ne Kadar Kalır? Kalıcı Makyaj İstediğin Zaman Çıkarılabilir Mi?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -430,7 +430,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Consectetur adipisicing elit
+                                                        İlkbahar  Modası 
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -446,7 +446,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Consectetur adipisicing elit. Atque error ipsa nihil placeat! A dolor fugiat ipsam laborum vitae!</p>
+                                                    <p>Sezonun Öne Çıkan Renkleri Nelerdir? Sokak Modasında En Çok Tercih Edilenler.</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -459,7 +459,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        A alias et magni maxime mollitia
+                                                        Takı Seçimi ve Temizliği
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -475,7 +475,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Aliquid commodi consequuntur deleniti eius iste nisi sapiente voluptates. Cum...</p>
+                                                    <p>Takı Seçiminde Neler Önemlidir? Takıların Temizliğinde Dikkat Edilmesi Gerekenler.</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
