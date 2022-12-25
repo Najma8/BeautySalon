@@ -228,7 +228,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Repudiandae sint velit vero voluptas
+                                                        Doğru Makyaj Nasıl Seçilir?
                                                     </h4>
                                                     <div class="entry-meta">
                                                         <span class="screen-reader-text">Posted on</span>
@@ -241,7 +241,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Accusamus ad adipisci alias culpa deleniti ducimus, est et ex fugiat iusto laudantium.</p>
+                                                    <p>Kıyafete uygun makyaj seçimi nasıl yapılır? Hangi tarza hangi makyaj yapılmalıdır? Son trend ne? </p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -254,7 +254,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Consectetur adipisicing elit
+                                                         Cilt Analizi Nedir?
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -270,7 +270,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias et voluptas.</p>
+                                                    <p>Cilt renk tonu nasıl belirlenir? Cilt alt tonu nasıl belirlenir? Cilt analizi nerede yapılır?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
