@@ -314,7 +314,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Repudiandae sint velit vero voluptas
+                                                       Kışın Cilt Bakımı
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -330,7 +330,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Asperiores aut autem deserunt distinctio eius enim et ex fuga hic laudantium.</p>
+                                                    <p>Kış aylarında cildin nem dengesi nasıl korunur? Cilt bakımında püf noktalar nedir?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
