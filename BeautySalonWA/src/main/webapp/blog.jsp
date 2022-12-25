@@ -488,7 +488,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Repudiandae sint velit vero voluptas
+                                                        Mor Şampuan Nedir?
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -504,7 +504,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Cumque et neque qui quos tenetur! Ab atque cupiditate excepturi id in iste placeat vel!</p>
+                                                    <p>Mor Şampuanı Kimler Kullanmalıdır? Mor Şampuan Nasıl Kullanılır?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -517,7 +517,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Consectetur adipisicing elit
+                                                        Tırnak Bakımı Hakkında
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -533,7 +533,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias et voluptas.</p>
+                                                    <p>Tırnak Bakımında Dikkat Edilmesi Gerekenler. Kalıcı Oje Uygulaması Zarar Verir Mi?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -546,7 +546,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        A alias et magni maxime mollitia
+                                                      Renk Uyumu Hakkında
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -562,7 +562,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Aperiam asperiores aut beatae dolorem ex excepturi, fugiat, id inventore...</p>
+                                                    <p>Birbiriyle uyumlu renkler nedir? Zıt renkler hangileridir? Renk seçimi nasıl olmalıdır?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
