@@ -232,7 +232,7 @@
                                                     </h4>
                                                     <div class="entry-meta">
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">March 11,
+                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">Mart 11,
                                                             2018
                                                         </time>
                                                     </div>
@@ -260,7 +260,7 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">March 15,
+                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">Mart 15,
                                                             2018
                                                         </time>
                                                     </div>
@@ -290,7 +290,7 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">March 18,
+                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">Mart 18,
                                                             2018
                                                         </time>
                                                     </div>
@@ -320,7 +320,7 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">March 11,
+                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">Mart 11,
                                                             2018
                                                         </time>
                                                     </div>
@@ -349,7 +349,7 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">March 15,
+                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">Nisan 15,
                                                             2018
                                                         </time>
                                                     </div>
@@ -378,7 +378,7 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">March 18,
+                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">Ağustos 18,
                                                             2018
                                                         </time>
                                                     </div>
@@ -407,7 +407,7 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">March 11,
+                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">Ağustos 11,
                                                             2018
                                                         </time>
                                                     </div>
@@ -436,8 +436,8 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">March 15,
-                                                            2018
+                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">Ocak 15,
+                                                            2019
                                                         </time>
                                                     </div>
                                                     <!-- .entry-meta -->
@@ -465,8 +465,8 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">March 18,
-                                                            2018
+                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">Ocak 18,
+                                                            2019
                                                         </time>
                                                     </div>
                                                     <!-- .entry-meta -->
@@ -494,8 +494,8 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">March 11,
-                                                            2018
+                                                        <time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">Şubat 11,
+                                                            2019
                                                         </time>
                                                     </div>
                                                     <!-- .entry-meta -->
@@ -523,8 +523,8 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">March 15,
-                                                            2018
+                                                        <time class="entry-date published updated" datetime="2018-03-15T15:15:12+00:00">Mart 15,
+                                                            2019
                                                         </time>
                                                     </div>
                                                     <!-- .entry-meta -->
@@ -552,8 +552,8 @@
 
 
                                                         <span class="screen-reader-text">Posted on</span>
-                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">March 18,
-                                                            2018
+                                                        <time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">Mart 18,
+                                                            2019
                                                         </time>
                                                     </div>
                                                     <!-- .entry-meta -->
