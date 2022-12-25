@@ -284,7 +284,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        A alias et magni maxime mollitia
+                                                         Dudak Bakımı Nedir?
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -300,7 +300,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Amet aut debitis deserunt dolor dolorem harum in, inventore magnam.</p>
+                                                    <p>Hangi ürünler kullanılmalı? Dudak bakımında dikkat edilmesi gerekenler nedir?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
