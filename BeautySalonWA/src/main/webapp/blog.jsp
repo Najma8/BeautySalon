@@ -343,7 +343,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        Consectetur adipisicing elit
+                                                        Kaş Şekli Tasarımı
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -359,7 +359,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>A amet, architecto aut delectus expedita harum neque perspiciatis quaerat.</p>
+                                                    <p>Yüzünüze uygun kaş tasarımı nasıl yapılır? Doğru kaş rengi ne olmalıdır?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -372,7 +372,7 @@
                                             <div class="item-content">
                                                 <header class="entry-header">
                                                     <h4 class="entry-title">
-                                                        A alias et magni maxime mollitia
+                                                        Saç Şekli ve Tasarımı
                                                     </h4>
                                                     <div class="entry-meta">
 
@@ -388,7 +388,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Adipisci asperiores assumenda, blanditiis cum cumque dolor, ea ratione!</p>
+                                                    <p>Cilt renginize uygun saç rengi hangisi? Doğru saç modeli nasıl seçilir?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
