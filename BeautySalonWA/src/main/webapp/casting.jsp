@@ -280,7 +280,7 @@
 
                             <div class="col-xs-12 col-lg-10 offset-lg-1 c-gutter-20">
                                 <h3>Randevu Oluşturma Formu</h3>
-                                <form class="pt-10" action="#" method="GET">
+                                <form class="pt-10" action="#" method="POST">
                                     <div class="row ">
                                         <div class="col-lg-6">
                                             <div class="form-group">
