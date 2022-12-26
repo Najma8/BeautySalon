@@ -6,14 +6,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 18 Ara 2022, 21:21:48
     Author     : asus
 */
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
-*/
-/* 
-    Created on : 18 Ara 2022, 21:15:20
-    Author     : asus
-*/
 :root {
   --primary-clr: #c76996;
 }
@@ -41,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/bg-menu.jpg");
+  /*background-image: url("../images/bg-menu.jpg");*/
 }
 .copyright {
     display: none;
