@@ -436,5 +436,43 @@
                         </div><!-- eof #canvas -->
                         <script src="js/compressed.js"></script>
                         <script src="js/main.js"></script>
+                              <script>
+
+                            function getAlert() {
+
+                                swal
+                                        ({
+                                             title: "Uyarı!",
+                                            text: "Aynı mail ile yalnızca bir soru sorabilirsiniz!",
+                                            //icon: "error",
+                                            button: "Tamam",
+
+                                        });
+                            }
+                        </script>
                         </body>
                         </html>
+<%
+         String name=request.getParameter("name");
+         String phone=request.getParameter("phone");
+         String email=request.getParameter("email");
+         String message=request.getParameter("message");
+
+
+          if (email != null && phone != null && name != null && message != null) {
+          question q=new question();
+          Boolean varmi = q.mailvarmi(email);
+          if(varmi)
+          {
+                        %>
+                        <script>getAlert();</script>
+                        <%
+            }
+            else
+            {
+            q.soruekle(name,email,phone, message);
+                           }
+
+          }
+
+                        %>
