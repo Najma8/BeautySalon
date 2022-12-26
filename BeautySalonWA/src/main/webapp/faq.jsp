@@ -393,19 +393,19 @@
                                                 <h3> Soru Sor! </h3>
                                                 <form class="" method="post" action="http://webdesign-finder.com/html/modelia/">
                                                     <div class="form-group">
-                                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD">
+                                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" required autofocus>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input title="phone" name="phone" type="tel" class="form-control" placeholder="TELEFON NO">
+                                                        <input title="phone" name="phone" type="number" class="form-control" placeholder="TELEFON NO" maxlength="11"  required autofocus>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input title="email" name="email" type="email" class="form-control" placeholder="EMAİL">
+                                                        <input title="email" name="email" type="email" class="form-control" placeholder="EMAİL" required autofocus>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input title="city" name="city" type="text" class="form-control" placeholder="ŞEHİR">
+                                                        <input title="city" name="city" type="text" class="form-control" placeholder="ŞEHİR" required autofocus>
                                                     </div>
                                                     <div class="form-group">
-                                                        <textarea title="message" name="message" cols="30" class="form-control" rows="9" placeholder="MESAJINIZ"></textarea>
+                                                        <textarea title="message" name="message" cols="30" class="form-control" rows="9" placeholder="MESAJINIZ" required autofocus></textarea>
                                                         <button type="submit" class="btn-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                                                     </div>
                                                 </form>
