@@ -11,13 +11,14 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
+
 <html class="no-js">
     <!--<![endif]-->
 
 
     <!-- casting12:57:10  -->
     <head>
-         <link rel="icon" href="images/home_icon.png" type="image/x-icon">
+        <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
         <title>Randevu Oluştur</title>
@@ -43,6 +44,15 @@
                 <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <![endif]-->
         <script>
+            var something = (function () {
+                var executed = false;
+                return function () {
+                    if (!executed) {
+                        executed = true;
+                        loaction.reload();
+                    }
+                };
+            })();
         </script>
         <style>
             .swal-button {
@@ -75,6 +85,16 @@
 
 
         </style>
+        <%
+            if (session.getAttribute("email") == null) {
+                response.sendRedirect("index.jsp");
+        %>
+        <script>
+            something();
+        </script>
+        <%
+        }
+        %>
     </head>
 
     <body onload="EmailYaz();">
@@ -165,7 +185,7 @@
                                                     <%
                                                         if (session.getAttribute("email") != null) {
                                                     %>
-                                                    <a href="login.jsp">
+                                                    <a href="logut.jsp">
                                                         <i class="fa fa-sign-in" aria-hidden="true"></i>
                                                     </a>
                                                     <a href="calendar.jsp">
@@ -199,7 +219,7 @@
                                         <%
                                             if (session.getAttribute("email") != null) {
                                         %>
-                                        <a href="login.jsp">
+                                        <a href="logout.jsp">
                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                                         </a>
                                         <a href="calendar.jsp">
@@ -260,7 +280,7 @@
 
                             <div class="col-xs-12 col-lg-10 offset-lg-1 c-gutter-20">
                                 <h3>Randevu Oluşturma Formu</h3>
-                                <form class="pt-10" action="#" method="POST">
+                                <form class="pt-10" action="#" method="GET">
                                     <div class="row ">
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -289,8 +309,8 @@
 
 
                                             <div class="form-group">
-                                                <select fdprocessedid="fg29n" name="kategori">
-                                                    <option value="kategori">Kategoriler</option>
+                                                <select fdprocessedid="fg29n" name="kategoriler" id="kategoriler">
+                                                    <option value="none" selected>Kategoriler</option>
                                                     <option value="manikur">Manikür</option>
                                                     <option value="pedikur">Pedikür</option>
                                                     <option value="kalicioje">Kalıcı Oje</option>
@@ -383,11 +403,11 @@
             String email = request.getParameter("email");
             String age = request.getParameter("age");
             String tarih = request.getParameter("tarih");
-            String kategori = request.getParameter("kategori");
+            String kategori = request.getParameter("kategoriler");
             String not = request.getParameter("about_user");
             if (phone != null && email != null && age != null && tarih != null && kategori != null) {
 
-                if (kategori == "kategori") {
+                if (kategori.equals("none")) {
         %>
         <script>
             getAlert2();
@@ -397,7 +417,7 @@
             database randevu = new database();
             Boolean rolustumu = randevu.RandevuKontrolu(phone, age, tarih, kategori, email, not);
             if (rolustumu) {
-                response.sendRedirect("index.jsp");
+//                response.sendRedirect("index.jsp");
             } else {
         %>
         <script>
