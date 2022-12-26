@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page  import="venustas.question"%>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,6 +17,37 @@
 
     <!-- faq12:57:26  -->
     <head>
+        <style>
+            .swal-button {
+                padding: 10px 22px;
+                border-radius: 2px;
+                background-color: #e41779;
+                font-size: 14px;
+                border: 1px solid #3e549a;
+                text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+                border-color: #e41779;
+            }
+            .swal-button:hover:focus{
+                background-color: #8c0f4b;
+                font-size: 14px;
+
+            }
+            .swal-text {
+
+                padding: 17px;
+                display: block;
+                margin: 22px;
+                text-align: center;
+                color: #61534e;
+                font-size: 18px;
+
+            }
+            .swal-button:focus{
+                background-color: #e41779;
+            }
+
+
+        </style>
     <title>Sıkça Sorulan Sorular</title>
     <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <meta charset="utf-8">
@@ -24,6 +56,8 @@
         <![endif]-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
