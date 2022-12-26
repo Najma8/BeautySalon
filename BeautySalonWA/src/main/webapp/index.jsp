@@ -128,7 +128,7 @@
                                             <%
                                                 if (session.getAttribute("email") != null) {
                                             %>
-                                            <a href="login.jsp">
+                                            <a href="logout.jsp">
                                                 <i class="fa fa-sign-in" aria-hidden="true"></i>
                                             </a>
                                             <a href="calendar.jsp">
@@ -192,7 +192,7 @@
                                         <%
                                             if (session.getAttribute("email") != null) {
                                         %>
-                                        <a href="login.jsp">
+                                        <a href="logout.jsp">
                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                                         </a>
                                         <a href="calendar.jsp">
