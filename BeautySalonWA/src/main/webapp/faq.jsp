@@ -391,7 +391,7 @@
                                             </div>
                                             <div class="col-xs-12 col-md-6">
                                                 <h3> Soru Sor! </h3>
-                                                <form class="" method="post" action="http://webdesign-finder.com/html/modelia/">
+                                                <form class="" method="post" action="#">
                                                     <div class="form-group">
                                                         <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" required autofocus>
                                                     </div>
