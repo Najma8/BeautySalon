@@ -93,7 +93,7 @@
             something();
         </script>
         <%
-        }
+            }
         %>
     </head>
 
@@ -397,6 +397,17 @@
 
                     });
         }
+        function getAlert3() {
+
+            swal
+                    ({
+                        //  title: "Uyarı!",
+                        text: "Randevunuz oluşturuldu!",
+                        //icon: "error",
+                        button: "Tamam",
+
+                    });
+        }
         </script>
         <%
             String phone = request.getParameter("phone");
@@ -417,8 +428,12 @@
             database randevu = new database();
             Boolean rolustumu = randevu.RandevuKontrolu(phone, age, tarih, kategori, email, not);
             if (rolustumu) {
-//                response.sendRedirect("index.jsp");
-            } else {
+        %>
+        <script>
+            getAlert3();
+        </script>
+        <%
+        } else {
         %>
         <script>
             getAlert();
