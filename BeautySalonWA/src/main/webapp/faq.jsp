@@ -401,9 +401,7 @@
                                                     <div class="form-group">
                                                         <input title="email" name="email" type="email" class="form-control" placeholder="EMAİL" required autofocus>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <input title="city" name="city" type="text" class="form-control" placeholder="ŞEHİR" required autofocus>
-                                                    </div>
+                                                   
                                                     <div class="form-group">
                                                         <textarea title="message" name="message" cols="30" class="form-control" rows="9" placeholder="MESAJINIZ" required autofocus></textarea>
                                                         <button type="submit" class="btn-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
