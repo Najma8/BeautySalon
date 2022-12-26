@@ -8,7 +8,11 @@
 <%@page import="venustas.database" %>
 <%@page import="org.json.simple.JSONArray" %>
 <!DOCTYPE html>
-
+<%
+    if (session.getAttribute("email") == null) {
+        response.sendRedirect("index.jsp");
+    }
+%>
 <html lang="en">
     <head>
         <link rel="icon" href="images/home_icon.png" type="image/x-icon">
