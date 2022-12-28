@@ -44,7 +44,11 @@
             database d1 = new database();
             JSONArray j1;
             if (session.getAttribute("email") != null) {
-                j1 = d1.Randevu(session.getAttribute("email").toString());
+                if (session.getAttribute("giristipi").equals("kullanici")) {
+                    j1 = d1.Randevu(session.getAttribute("email").toString());
+                } else {
+                    j1 = d1.CalisanRandevu(session.getAttribute("email").toString());
+                }
             } else {
                 j1 = new JSONArray();
             }
@@ -58,7 +62,7 @@
     </head>
     <body style="background-color: #000;">
         <div id="box_wrapper" style="width: 100%; height: 100%; background-color: #000;">
-            <header class="page_header ds bottom_mask_add">
+            <header class="page_header ds">
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-4 col-md-5 col-11">
@@ -101,7 +105,7 @@
                                                 <%
                                                     if (session.getAttribute("email") != null) {
                                                 %>
-                                                <a href="login.jsp">
+                                                <a href="logout.jsp">
                                                     <i class="fa fa-sign-in" aria-hidden="true"></i>
                                                 </a>
                                                 <a href="calendar.jsp">
@@ -135,7 +139,7 @@
                                     <%
                                         if (session.getAttribute("email") != null) {
                                     %>
-                                    <a href="login.jsp">
+                                    <a href="logout.jsp">
                                         <i class="fa fa-sign-in" aria-hidden="true"></i>
                                     </a>
                                     <a href="calendar.jsp">
