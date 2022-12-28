@@ -45,9 +45,15 @@ public class database {
         try {
             int id = 0;
             Class.forName("com.mysql.jdbc.Driver");
+          
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from kullanici where email='" + email + "' and sifre='" + sifre + "'");
+            
+            PreparedStatement ps = con.prepareStatement("Select * from kullanici where email=? and sifre=?");
+
+            ps.setString(1, email);
+            ps.setString(2, sifre);
+
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 g.setGiristipi("kullanici");
                 g.setGirisdurumu(true);
@@ -80,8 +86,12 @@ public class database {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from kullanici where email='" + email + "'");
+            
+            
+           PreparedStatement ps = con.prepareStatement("Select * from kullanici where email=?");
+            ps.setString(1, email);
+
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
 
                 kayitlimi = true;
@@ -101,20 +111,36 @@ public class database {
             int tekrarlamasuresi = 0, seanssayisi = 1;
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
-            Statement stmt = con.createStatement();
-            LocalDateTime dateTime = LocalDateTime.parse(time);
-            ResultSet rs = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
+           
+             LocalDateTime dateTime = LocalDateTime.parse(time);
+
+            PreparedStatement ps = con.prepareStatement("Select * from randevu where tarih=?");
+            ps.setString(1, tarih);
+
+            ResultSet rs = ps.executeQuery();
+          
             if (!rs.next()) {
                 stmt.execute("UPDATE `kullanici` SET `telno` = '" + telno + "', `yas` = '" + yas + "' WHERE `email` ='" + email + "'");
                 int kategoriid = 0;
                 int kullaniciid = 0;
-                ResultSet rs2 = stmt.executeQuery("Select * from kategori where name='" + kategori + "'");
+                
+                ps = con.prepareStatement("Select * from kategori where name=?");
+                ps.setString(1, name);
+
+                ResultSet rs2 = ps.executeQuery();
+             
                 while (rs2.next()) {
                     tekrarlamasuresi = rs2.getInt("tekrarlamasuresi");
                     seanssayisi = rs2.getInt("seanssayisi");
                     kategoriid = rs2.getInt("id");
                 }
-                ResultSet rs3 = stmt.executeQuery("Select * from kullanici where email='" + email + "'");
+          
+               
+                ps = con.prepareStatement("Select * from kullanici where email=?");
+
+                ps.setString(1, email);
+                ResultSet rs3 = ps.executeQuery();
+                
                 while (rs3.next()) {
                     kullaniciid = rs3.getInt("id");
                 }
@@ -163,8 +189,11 @@ public class database {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from kullanici where email='" + email + "'");
+           
+             PreparedStatement ps=con.prepareStatement("Select * from kullanici where email=?");
+            ps.setString(1, email);
+            ResultSet rs=ps.executeQuery();
+        
             while (rs.next()) {
                 kullaniciid = rs.getInt("id");
             }
