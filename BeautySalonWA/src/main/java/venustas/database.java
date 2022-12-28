@@ -5,7 +5,6 @@
 package venustas;
 
 import org.json.simple.*;
-import org.json.simple.parser.JSONParser;
 import static java.lang.System.out;
 import java.sql.Array;
 import java.sql.Connection;
@@ -155,7 +154,6 @@ public class database {
         ArrayList<Integer> dateint = new ArrayList<>();
         ArrayList<String> starttime = new ArrayList<>();
 
-        JSONParser parser = new JSONParser();
         JSONArray array;
         array = new JSONArray();
         int kullaniciid = 0;
@@ -171,6 +169,96 @@ public class database {
             while (rs.next()) {
                 String sqldatetime = rs.getTimestamp("tarih").toString();
                 String kategori = rs.getString("name");
+                datetime.add(sqldatetime);
+                kategoriadi.add(kategori);
+            }
+            con.close();
+            for (int i = 0; i < datetime.size(); i++) {
+                String[] testdizi = datetime.get(i).split(" ");
+                String teststring = testdizi[0];
+                date.add(teststring);
+                teststring = testdizi[1];
+                time.add(teststring);
+            }
+            int x = 0;
+            int y = 0;
+            for (int i = 0; i < date.size(); i++) {
+                String[] testdizi = date.get(i).split("-");
+
+                try {
+                    String teststring = testdizi[0];
+                    dateint.add(Integer.parseInt(teststring));
+                    teststring = testdizi[1];
+                    dateint.add(Integer.parseInt(teststring));
+                    teststring = testdizi[2];
+                    dateint.add(Integer.parseInt(teststring));
+                    x = x + 3;
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            }
+            for (int i = 0; i < time.size(); i++) {
+                String[] testdizi = time.get(i).split(":");
+                try {
+                    String teststring = testdizi[0];
+                    String teststring2 = testdizi[1];
+                    starttime.add(teststring + ":" + teststring2);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            }
+            int j = 0;
+            int k = 0;
+            for (int i = 0; i < kategoriadi.size(); i++) {
+
+                Map events = new LinkedHashMap();
+                events.put("title", kategoriadi.get(i));
+                events.put("time", starttime.get(i));
+
+                JSONArray eventsarray = new JSONArray();
+                eventsarray.add(events);
+
+                Map randevubilgisi = new LinkedHashMap();
+                randevubilgisi.put("day", dateint.get(j + 2));
+                randevubilgisi.put("month", dateint.get(j + 1));
+                randevubilgisi.put("year", dateint.get(j));
+                randevubilgisi.put("events", eventsarray);
+
+                array.add(randevubilgisi);
+
+                j = j + 3;
+                k = k + 2;
+            }
+            System.out.println(array.toString());
+        } catch (Exception e) {
+            out.println(e);
+        }
+        return array;
+    }
+    public JSONArray CalisanRandevu(String email) {
+        JSONObject j1 = new JSONObject();
+        ArrayList<String> datetime = new ArrayList<>();
+        ArrayList<String> kategoriadi = new ArrayList<>();
+        ArrayList<String> date = new ArrayList<>();
+        ArrayList<String> time = new ArrayList<>();
+        ArrayList<Integer> dateint = new ArrayList<>();
+        ArrayList<String> starttime = new ArrayList<>();
+
+        JSONArray array;
+        array = new JSONArray();
+        int calisanid = 0;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * from calisan where email='" + email + "'");
+            while (rs.next()) {
+                calisanid = rs.getInt("id");
+            }
+            rs = stmt.executeQuery("SELECT * FROM randevu INNER JOIN kategori ON randevu.kategoriid = kategori.id INNER JOIN calisan ON kategori.calisanid = calisan.id WHERE kategori.calisanid =" + calisanid);
+            while (rs.next()) {
+                String sqldatetime = rs.getTimestamp("tarih").toString();
+                String kategori = rs.getString(7);
                 datetime.add(sqldatetime);
                 kategoriadi.add(kategori);
             }
