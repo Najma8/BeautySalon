@@ -79,10 +79,10 @@
                                 <h4 class="card-title">Yeni Hesap Oluştur</h4>
                                 <form method="POST" class="my-login-validation" novalidate="" action="#">
                                     <div class="form-group">
-                                        <label for="name">Ad Soyad</label>
+                                        <label for="name">Kullanıcı Adı</label>
                                         <input id="name" type="text" class="form-control" name="name" required autofocus>
                                         <div class="invalid-feedback">
-                                            Adınız ne?
+                                            Geçersiz kullanıcı adı!
                                         </div>
                                     </div>
 
