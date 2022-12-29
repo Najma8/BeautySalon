@@ -295,7 +295,8 @@
                                                 <input type="text" name="name" placeholder="Ad soyad" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <input type="tel" name="phone" placeholder="Telefon No" class="form-control">
+                                                <input type="tel" name="phone" placeholder="Telefon No" class="form-control" pattern="[5][0-9]{9}" oninvalid="this.setCustomValidity('Telefon numaranız 5 ile başlamalı ve on haneli olmalı!')"
+                                                       onvalid="this.setCustomValidity('')">
                                             </div>
                                             <div class="form-group">
                                                 <input type="datetime-local" name="tarih" placeholder="Tarih" class="form-control" fdprocessedid="23cqkf" min="<%=date%>" oninvalid="this.setCustomValidity('Geçmiş zaman için randevu alamazsınız!')"
