@@ -4,6 +4,8 @@
     Author     : nadab
 --%>
 
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page  import="venustas.database"%>
 <!DOCTYPE html>
@@ -44,7 +46,7 @@
                 <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <![endif]-->
         <script>
-            var something = (function () {
+            var reload = (function () {
                 var executed = false;
                 return function () {
                     if (!executed) {
@@ -90,7 +92,7 @@
                 response.sendRedirect("index.jsp");
         %>
         <script>
-            something();
+            reload();
         </script>
         <%
             }
@@ -98,6 +100,12 @@
     </head>
 
     <body onload="EmailYaz();">
+        <%
+            String pattern = "yyyy-MM-dd'T'HH:mm";
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
+            String date = simpleDateFormat.format(new Date());
+        %>
         <!--[if lt IE 9]>
                 <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
         <![endif]-->
@@ -290,7 +298,8 @@
                                                 <input type="tel" name="phone" placeholder="Telefon No" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <input type="datetime-local" name="tarih" placeholder="Tarih" class="form-control" fdprocessedid="23cqkf"></input>
+                                                <input type="datetime-local" name="tarih" placeholder="Tarih" class="form-control" fdprocessedid="23cqkf" min="<%=date%>" oninvalid="this.setCustomValidity('Geçmiş zaman için randevu alamazsınız!')"
+                                                       onvalid="this.setCustomValidity('')"></input>
                                             </div>
 
 
@@ -304,7 +313,7 @@
                                                 <input type="hidden" id="email" name="email" value="<%=session.getAttribute("email")%>">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" name="age" placeholder="Yaş" class="form-control">
+                                                <input type="number" name="age" id="age" placeholder="Yaş" class="form-control" min="10" max="120">
                                             </div>
 
 
@@ -374,6 +383,17 @@
         <script src="js/main.js"></script>
 
         <script>
+
+        var input = document.getElementById("age");
+        input.addEventListener("input", function (e) {
+            this.setCustomValidity("");
+
+            if (this.validity.rangeOverflow) {
+                this.setCustomValidity("120 yaşından büyük olduğunuz için randevu alamazsınız");
+            } else if (this.validity.rangeUnderflow) {
+                this.setCustomValidity("10 yaşından küçük olduğunuz için randevu alamazsınız");
+            }
+        });
 
         function getAlert() {
 
