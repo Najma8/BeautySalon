@@ -152,7 +152,7 @@
                         session.setAttribute("giristipi", "kullanici");
                         session.setAttribute("email", email);
                         session.setMaxInactiveInterval(86400);
-                        response.sendRedirect("index.jsp");
+                        response.sendRedirect(request.getContextPath()+"/index.jsp");
                     }
                 }
             }
