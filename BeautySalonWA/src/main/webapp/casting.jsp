@@ -292,7 +292,7 @@
                                     <div class="row ">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control" required oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
+                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control" pattern="[a-zA-Z]*" required oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
                                                        onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                             </div>
                                             <div class="form-group">
