@@ -21,7 +21,7 @@ public class question {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
             Statement stmt = con.createStatement();
-            stmt.execute("INSERT INTO deneme (name,email,telno,mesaj) Values('" + name + "','" + email + "','" + telno + "','" + mesaj + "')");
+            stmt.execute("INSERT INTO question (name,email,telno,mesaj) Values('" + name + "','" + email + "','" + telno + "','" + mesaj + "')");
             con.close();
         } catch (Exception e) {
             out.println(e);
@@ -33,7 +33,7 @@ public class question {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from deneme where email='" + email + "'");
+            ResultSet rs = stmt.executeQuery("Select * from question where email='" + email + "'");
             while (rs.next()) {
 
                 kayitlimi = true;
