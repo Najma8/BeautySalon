@@ -292,8 +292,8 @@
                                     <div class="row ">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control" pattern="[a-zA-Z]*" required oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
-                                                       onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
+                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control" pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı]*" required oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
+                                               onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                             </div>
                                             <div class="form-group">
                                                 <input type="number" name="phone" placeholder="Telefon No" id="phone" class="form-control" max="999999999999999" min="0" oninvalid="this.setCustomValidity('Bu alanın 0\'dan büyük ve en fazla 15 basamaklı olacak şekilde doldurulması zorunludur!')"
