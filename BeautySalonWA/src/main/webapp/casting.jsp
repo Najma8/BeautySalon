@@ -292,14 +292,16 @@
                                     <div class="row ">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control">
+                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control" required oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
+                                                       onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                             </div>
                                             <div class="form-group">
-                                                <input type="tel" name="phone" placeholder="Telefon No" class="form-control">
+                                                <input type="number" name="phone" placeholder="Telefon No" id="phone" class="form-control" max="999999999999999" min="0" oninvalid="this.setCustomValidity('Bu alanın 0\'dan büyük ve en fazla 15 basamaklı olacak şekilde doldurulması zorunludur!')"
+                                                       onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')" required>
                                             </div>
                                             <div class="form-group">
-                                                <input type="datetime-local" name="tarih" placeholder="Tarih" class="form-control" fdprocessedid="23cqkf" min="<%=date%>" oninvalid="this.setCustomValidity('Geçmiş zaman için randevu alamazsınız!')"
-                                                       onvalid="this.setCustomValidity('')"></input>
+                                                <input type="datetime-local" name="tarih" placeholder="Tarih" class="form-control" fdprocessedid="23cqkf" min="<%=date%>" oninvalid="this.setCustomValidity('Bu alan geçmiş zaman ve boş olamaz!')"
+                                                       onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')" required></input>
                                             </div>
 
 
@@ -348,7 +350,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="checkbox" id="agreement" name="agreement" value="agreement"><label class="mt-40" for="agreement">Venustas Hüküm ve Koşullarını Kabul Ediyorum</label>
+                                    <input type="checkbox" id="agreement" name="agreement" value="agreement" required oninvalid="getAlert4();"><label class="mt-40" for="agreement">Venustas Hüküm ve Koşullarını Kabul Ediyorum</label>
                                     <div class="form-group mt-30">
                                         <button type="submit" class="btn-maincolor">Randevu Oluştur</button>
                                     </div>
@@ -423,6 +425,17 @@
                     ({
                         //  title: "Uyarı!",
                         text: "Randevunuz oluşturuldu!",
+                        //icon: "error",
+                        button: "Tamam",
+
+                    });
+        }
+        function getAlert4() {
+
+            swal
+                    ({
+                        //  title: "Uyarı!",
+                        text: "Hüküm ve koşulları kabul etmelisiniz!",
                         //icon: "error",
                         button: "Tamam",
 
