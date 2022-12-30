@@ -146,6 +146,7 @@
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
                 <script src="js/my-login.js"></script>
                 <%
+                    request.setCharacterEncoding("UTF-8");
                     String email = request.getParameter("email");
                     String sifre = request.getParameter("password");
                     if (email != null && sifre != null) {
