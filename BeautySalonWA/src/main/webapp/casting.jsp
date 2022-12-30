@@ -430,6 +430,7 @@
         }
         </script>
         <%
+            request.setCharacterEncoding("UTF-8");
             String phone = request.getParameter("phone");
             String email = request.getParameter("email");
             String age = request.getParameter("age");
