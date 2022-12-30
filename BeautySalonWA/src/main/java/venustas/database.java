@@ -31,7 +31,7 @@ public class database {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
             Statement stmt = con.createStatement();
-            stmt.execute("INSERT INTO kullanici (kullaniciadi,email,sifre) Values('" + name + "','" + email + "','" + sifre + "')");
+            stmt.execute("INSERT INTO kullanici (name,email,sifre) Values('" + name + "','" + email + "','" + sifre + "')");
             con.close();
         } catch (Exception e) {
             out.println(e);
