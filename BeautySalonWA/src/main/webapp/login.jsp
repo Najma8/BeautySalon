@@ -166,7 +166,7 @@
                         response.addCookie(myemail);
                         response.addCookie(mypassword);
                     }
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect(request.getContextPath()+"/index.jsp");
 //                               
                 } else {
         %>
