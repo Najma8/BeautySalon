@@ -79,10 +79,11 @@
                                 <h4 class="card-title">Yeni Hesap Oluştur</h4>
                                 <form method="POST" class="my-login-validation" novalidate="" action="#">
                                     <div class="form-group">
-                                        <label for="name">Kullanıcı Adı</label>
-                                        <input id="name" type="text" class="form-control" name="name" required autofocus>
+                                        <label for="name">Ad Soyad</label>
+                                        <input id="name" type="text" class="form-control" name="name" required autofocus pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı]*" oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
+                                               onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                         <div class="invalid-feedback">
-                                            Geçersiz kullanıcı adı!
+                                            Geçersiz ad soyad!
                                         </div>
                                     </div>
 
