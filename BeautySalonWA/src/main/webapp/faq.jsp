@@ -393,17 +393,21 @@
                                 <h3> Soru Sor! </h3>
                                 <form class="" method="post" action="#">
                                     <div class="form-group">
-                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" required autofocus>
+                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" required autofocus oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
+                                               onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                     </div>
                                     <div class="form-group">
-                                        <input title="phone" name="phone" type="number" class="form-control" placeholder="TELEFON NO" maxlength="11"  required autofocus>
+                                        <input title="phone" name="phone" type="number" class="form-control" placeholder="TELEFON NO" max="999999999999999" min="0" oninvalid="this.setCustomValidity('Bu alanın 0\'dan büyük ve en fazla 15 basamaklı olacak şekilde doldurulması zorunludur!')"
+                                               onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')" required>
                                     </div>
                                     <div class="form-group">
-                                        <input title="email" name="email" type="email" class="form-control" placeholder="EMAİL" required autofocus>
+                                        <input title="email" name="email" type="email" class="form-control" placeholder="EMAİL" required autofocus oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
+                                               onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                     </div>
 
                                     <div class="form-group">
-                                        <textarea title="message" name="message" cols="30" class="form-control" rows="9" placeholder="MESAJINIZ" required autofocus></textarea>
+                                        <textarea title="message" name="message" cols="30" class="form-control" rows="9" placeholder="MESAJINIZ" required autofocus oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
+                                                  onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')"></textarea>
                                         <button type="submit" class="btn-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                                     </div>
                                 </form>
