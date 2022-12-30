@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <%
     if (session.getAttribute("email") == null) {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect(request.getContextPath()+"/index.jsp");
     }
 %>
 <html lang="en">
