@@ -16,7 +16,7 @@
 
     <!-- contact212:57:30  -->
     <head>
-          <link rel="icon" href="images/home_icon.png" type="image/x-icon">
+        <link rel="icon" href="images/home_icon.png" type="image/x-icon">
         <title>İletişim</title>
         <meta charset="utf-8">
         <!--[if IE]>
@@ -280,41 +280,6 @@
                         <div class="fw-divider-space hidden-above-lg mt-20"></div>
                         <div class="row">
                             <div class="col-12 animate" data-animation="scaleAppear">
-                                <form class="contact-form c-mb-20 c-gutter-20" method="post" action="http://webdesign-finder.com/">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" name="name" class="form-control" placeholder="AD SOYAD">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="email" name="email" class="form-control" placeholder="EMAİL">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="tel" name="phone" class="form-control" placeholder="TELEFON NO">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" name="city" class="form-control" placeholder="ŞEHİR">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <textarea rows="6" cols="45" name="message" class="form-control" placeholder="MESAJINIZ"></textarea>
-                                                <button type="submit" class="btn-submit"><i class="fa fa-paper-plane"></i></button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </form>
                             </div>
                             <!--.col-* -->
 
