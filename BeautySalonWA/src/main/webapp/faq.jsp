@@ -393,7 +393,7 @@
                                 <h3> Soru Sor! </h3>
                                 <form class="" method="post" action="#">
                                     <div class="form-group">
-                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" required autofocus oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
+                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı]*" required autofocus oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
                                                onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                     </div>
                                     <div class="form-group">
