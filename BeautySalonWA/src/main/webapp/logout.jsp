@@ -28,9 +28,9 @@
             sil();
         </script>
         <%        
-                response.sendRedirect("index.jsp");
+                response.sendRedirect(request.getContextPath()+"/index.jsp");
             } else {
-                response.sendRedirect("index.jsp");
+                response.sendRedirect(request.getContextPath()+"/index.jsp");
             }
         %>
     </body>
