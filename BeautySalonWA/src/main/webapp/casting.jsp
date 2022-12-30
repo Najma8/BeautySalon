@@ -89,7 +89,7 @@
         </style>
         <%
             if (session.getAttribute("email") == null) {
-                response.sendRedirect("index.jsp");
+                response.sendRedirect(request.getContextPath()+"/index.jsp");
         %>
         <script>
             reload();
