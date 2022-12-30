@@ -157,8 +157,15 @@ public class database {
                         dateTime = dateTime.plusDays(tekrarlamasuresi);
                         do {
                             degisimsayisi = 0;
-                            ResultSet rset = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
-                            while (rset.next()) {
+                         //   ResultSet rset = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
+                           ps=con.prepareStatement("Select * from randevu where tarih=?");
+                           stmt=con.createStatement();
+                           ps.setString(i, tarih);
+                           
+                            rs=ps.executeQuery();
+                            
+                            
+                            while (rs.next()) {
                                 dateTime = dateTime.plusHours(1);
                                 degisimsayisi = 1;
                             }
