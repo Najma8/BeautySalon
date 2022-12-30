@@ -133,6 +133,7 @@
         <script src="js/my-login.js"></script>
 
         <%
+            request.setCharacterEncoding("UTF-8");
             String name = request.getParameter("name");
             String email = request.getParameter("email");
             String sifre = request.getParameter("password");
