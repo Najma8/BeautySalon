@@ -80,7 +80,7 @@
                                 <form method="POST" class="my-login-validation" novalidate="" action="#">
                                     <div class="form-group">
                                         <label for="name">Ad Soyad</label>
-                                        <input id="name" type="text" class="form-control" name="name" required autofocus pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı]*" oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
+                                        <input id="name" type="text" class="form-control" name="name" required autofocus pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı]+\s{0,1}[a-zA-ZĞÜŞİÖÇIğüşiöçı]*\s{0,1}[a-zA-ZĞÜŞİÖÇIğüşiöçı]*" oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
                                                onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                         <div class="invalid-feedback">
                                             Geçersiz ad soyad!
