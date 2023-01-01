@@ -401,7 +401,7 @@
                                                onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')" required>
                                     </div>
                                     <div class="form-group">
-                                        <input title="email" name="email" type="email" class="form-control" placeholder="EMAİL" required autofocus oninvalid="this.setCustomValidity('Bu alan boş bırakılamaz!')"
+                                        <input title="email" name="email" type="email" class="form-control" placeholder="EMAİL" required autofocus oninvalid="this.setCustomValidity('Bu alanın Türkçe karakter içermeyecek şekilde doldurulması gereklidir!')"
                                                onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                     </div>
 
