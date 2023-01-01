@@ -562,7 +562,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Birbiriyle uyumlu renkler nedir? Zıt renkler hangileridir? Renk seçimi nasıl olmalıdır?</p>
+                                                    <p>Birbiriyle Uyumlu Renkler Nedir? Zıt Renkler Hangileridir? Renk Seçimi Nasıl Olmalıdır?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
