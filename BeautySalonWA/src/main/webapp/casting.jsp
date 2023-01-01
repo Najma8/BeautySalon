@@ -292,7 +292,7 @@
                                     <div class="row ">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control" pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı ]*" required oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
+                                                <input type="text" name="name" placeholder="Ad soyad" class="form-control" pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı]+\s{0,1}[a-zA-ZĞÜŞİÖÇIğüşiöçı]*" required oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
                                                onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                             </div>
                                             <div class="form-group">
