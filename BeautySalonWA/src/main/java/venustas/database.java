@@ -114,22 +114,22 @@ public class database {
             int tekrarlamasuresi = 0, seanssayisi = 1;
             Class.forName("com.mysql.jdbc.Driver");
             try ( Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13")) {
-            //    Statement stmt = con.createStatement();
-              
+                //    Statement stmt = con.createStatement();
+
                 LocalDateTime dateTime = LocalDateTime.parse(time);
                 PreparedStatement ps = con.prepareStatement("Select * from randevu where tarih=?");
                 Statement stmt;
                 stmt = con.createStatement();
-                
-           //     ResultSet rs = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
-               ps.setString(1, tarih);
+
+                //     ResultSet rs = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
+                ps.setString(1, dateTime.toString());
 
                 ResultSet rs = ps.executeQuery();
                 if (!rs.next()) {
                     stmt.execute("UPDATE `kullanici` SET `telno` = '" + telno + "', `yas` = '" + yas + "' WHERE `email` ='" + email + "'");
                     int kategoriid = 0;
                     int kullaniciid = 0;
-                    PreparedStatement ps = con.prepareStatement("Select * from kategori where name=?");
+                    ps = con.prepareStatement("Select * from kategori where name=?");
                     ps.setString(1, kategori);
 
                     ResultSet rs2 = ps.executeQuery();
@@ -157,14 +157,13 @@ public class database {
                         dateTime = dateTime.plusDays(tekrarlamasuresi);
                         do {
                             degisimsayisi = 0;
-                         //   ResultSet rset = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
-                           ps=con.prepareStatement("Select * from randevu where tarih=?");
-                           stmt=con.createStatement();
-                           ps.setString(i, tarih);
-                           
-                            rs=ps.executeQuery();
-                            
-                            
+                            //   ResultSet rset = stmt.executeQuery("Select * from randevu where tarih='" + dateTime + "'");
+                            ps = con.prepareStatement("Select * from randevu where tarih=?");
+                            stmt = con.createStatement();
+                            ps.setString(1, dateTime.toString());
+
+                            rs = ps.executeQuery();
+
                             while (rs.next()) {
                                 dateTime = dateTime.plusHours(1);
                                 degisimsayisi = 1;
