@@ -241,7 +241,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Kıyafete uygun makyaj seçimi nasıl yapılır? Hangi tarza hangi makyaj yapılmalıdır? Son trend ne? </p>
+                                                    <p>Kıyafete Uygun Makyaj Seçimi Nasıl Yapılır? Hangi Tarza Hangi Makyaj Yapılmalıdır? Son Trend Ne? </p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -270,7 +270,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Cilt renk tonu nasıl belirlenir? Cilt alt tonu nasıl belirlenir? Cilt analizi nerede yapılır?</p>
+                                                    <p>Cilt Renk Tonu Nasıl Belirlenir? Cilt Alt Tonu Nasıl Belirlenir? Cilt Analizi Nerede Yapılır?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -300,7 +300,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Hangi ürünler kullanılmalı? Dudak bakımında dikkat edilmesi gerekenler nedir?</p>
+                                                    <p>Hangi Ürünler Kullanılmalı? Dudak Bakımında Dikkat Edilmesi Gerekenler Nedir?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
