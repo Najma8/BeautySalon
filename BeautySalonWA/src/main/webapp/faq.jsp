@@ -393,7 +393,7 @@
                                 <h3> Soru Sor! </h3>
                                 <form class="" method="post" action="#">
                                     <div class="form-group">
-                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı]*" required autofocus oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
+                                        <input title="name" name="name" type="text" class="form-control" placeholder="AD SOYAD" pattern="[a-zA-ZĞÜŞİÖÇIğüşiöçı ]*" required autofocus oninvalid="this.setCustomValidity('Bu alan özel karakter içeremez ve boş bırakılamaz!')"
                                                onvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')">
                                     </div>
                                     <div class="form-group">
@@ -445,8 +445,20 @@
                 swal
                         ({
                             title: "Uyarı!",
-                            text: "Aynı mail ile yalnızca bir soru sorabilirsiniz!",
+                            text: "Aynı mail ile yalnızca günde bir soru sorabilirsiniz!",
                             //icon: "error",
+                            button: "Tamam",
+
+                        });
+            }
+            
+            function getAlert2() {
+
+                swal
+                        ({
+                          //  title: "Uyarı!",
+                            text: "Sorunuz başarıyla gönderildi!",
+                            icon: "success",
                             button: "Tamam",
 
                         });
@@ -459,15 +471,30 @@
             String email = request.getParameter("email");
             String message = request.getParameter("message");
 
+
             if (email != null && phone != null && name != null && message != null) {
                 question q = new question();
-                Boolean varmi = q.mailvarmi(email);
-                if (varmi) {
-        %>
-        <script>getAlert();</script>
-        <%
+                Boolean emailvarmi = q.mailvarmi(email);
+                if (emailvarmi) {
+                Boolean soruvarmi = q.gunkontrol(email);
+                    if(soruvarmi)
+                    {
+                        %>
+                            <script>getAlert();</script>
+                        <%
+                    }
+                    else{
+                          q.soruekle(name, email, phone, message);
+                        %>
+                            <script>getAlert2();</script>
+                        <%
+                        }
+  
                 } else {
                     q.soruekle(name, email, phone, message);
+                        %>
+                            <script>getAlert2();</script>
+                        <%
                 }
 
             }
