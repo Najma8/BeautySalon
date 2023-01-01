@@ -330,7 +330,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Kış aylarında cildin nem dengesi nasıl korunur? Cilt bakımında püf noktalar nedir?</p>
+                                                    <p>Kış Aylarında Cildin Nem Dengesi Nasıl Korunur? Cilt Bakımında Püf Noktalar Nedir?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -359,7 +359,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Yüzünüze uygun kaş tasarımı nasıl yapılır? Doğru kaş rengi ne olmalıdır?</p>
+                                                    <p>Yüzünüze Uygun Kaş Tasarımı Nasıl Yapılır? Doğru Kaş Rengi Ne Olmalıdır?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
@@ -388,7 +388,7 @@
                                                 <!-- .entry-header -->
 
                                                 <div class="entry-content">
-                                                    <p>Cilt renginize uygun saç rengi hangisi? Doğru saç modeli nasıl seçilir?</p>
+                                                    <p>Cilt Renginize Uygun Saç Rengi Hangisi? Doğru Saç Modeli Nasıl Seçilir?</p>
                                                 </div><!-- .entry-content -->
                                             </div><!-- .item-content -->
                                         </article><!-- #post-## -->
