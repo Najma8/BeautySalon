@@ -29,6 +29,8 @@ public class database {
     public void insert(String name, String email, String sifre) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
+          
+              //   Connection con = DriverManager.getConnection("jdbc:mysql://node107696-venustas.jls-sto1.elastx.net?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "root", "LDAcxm34351");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
             Statement stmt = con.createStatement();
             stmt.execute("INSERT INTO kullanici (name,email,sifre) Values('" + name + "','" + email + "','" + sifre + "')");
