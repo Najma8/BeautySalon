@@ -39,8 +39,16 @@ public class question {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
+          
+              PreparedStatement ps = con.prepareStatement("Select * from question where email=?");
+
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from question where email='" + email + "'");
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            
+         
+         //   Statement stmt = con.createStatement();
+         //   ResultSet rs = stmt.executeQuery("Select * from question where email='" + email + "'");
             while (rs.next()) {
 
                 kayitlimi = true;
@@ -60,8 +68,15 @@ public class question {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://app.sobiad.com:3306/grup13?useUnicode=true&characterEncoding=UTF-8&useSSL=false", "grup13", "grup13");
+           
+            PreparedStatement ps = con.prepareStatement("Select tarih from question where email=?");
+
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select tarih from question where email='" + email + "'");
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+
+            //Statement stmt = con.createStatement();
+            //ResultSet rs = stmt.executeQuery("Select tarih from question where email='" + email + "'");
             while (rs.next()) {
                 
                 if(rs.getDate("tarih").compareTo(tarih)==0)
